@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="icon" type="image/png" href="assets/logo.png" style="height: 30px;">
+  <link rel="icon" type="image/png" href="assets/logo.png">
   <title>Travel Agency Website</title>
 </head>
 
@@ -19,8 +19,8 @@
   <div class="container-xxl">
     <nav class="navbar navbar-expand-lg navbar-light custom-navbar animate__animated animate__fadeInDown">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#home">
-          <img src="assets/logo.png" alt="" class="w-70">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/logo.svg" alt="TravelEase Logo" class="w-70" style="height: 40px;">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -418,54 +418,53 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
-    // Initialize AOS with optimized settings
+    // Initialize AOS with modified settings
     AOS.init({
-      duration: 600, // Faster duration for snappier animations
-      once: true, // Prevent repeated animations
-      offset: 120, // Slightly higher offset for better timing
-      delay: 0, // No delay for immediate response
-      easing: 'ease-in-out', // Smooth easing function
-      mirror: false, // Disable mirror for better performance
-      disable: function() {
-        return window.innerWidth < 768; // Disable on mobile
-      }
+      duration: 1000,
+      once: false, // Changed to false to allow animations to repeat
+      offset: 100,
+      mirror: true, // Elements will animate out while scrolling past them
+      disable: 'mobile' // Disable on mobile devices for better performance
     });
 
-    // Optimize scroll performance with requestAnimationFrame
-    let ticking = false;
+    // Add scroll-triggered animations with reset
     window.addEventListener('scroll', function() {
-      if (!ticking) {
-        window.requestAnimationFrame(function() {
-          const elements = document.querySelectorAll('.animate__animated');
-          elements.forEach(element => {
-            const position = element.getBoundingClientRect();
-            if(position.top < window.innerHeight && position.bottom >= 0) {
-              element.style.visibility = 'visible';
-            }
-          });
-          ticking = false;
-        });
-        ticking = true;
-      }
-    }, { passive: true });
-
-    // Smooth scroll with improved performance
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          const headerOffset = 80; // Adjust based on your header height
-          const elementPosition = target.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
+      const elements = document.querySelectorAll('.animate__animated');
+      elements.forEach(element => {
+        const position = element.getBoundingClientRect();
+        if(position.top < window.innerHeight && position.bottom >= 0) {
+          element.style.visibility = 'visible';
+          // Reset animation classes
+          element.classList.remove('animate__animated');
+          void element.offsetWidth; // Trigger reflow
+          element.classList.add('animate__animated');
         }
       });
     });
+
+    // Add smooth scroll behavior
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Reset animations when scrolling up
+    let lastScrollTop = 0;
+    window.addEventListener('scroll', function() {
+      const st = window.pageYOffset || document.documentElement.scrollTop;
+      if (st < lastScrollTop) {
+        // Scrolling up
+        const elements = document.querySelectorAll('[data-aos]');
+        elements.forEach(element => {
+          element.classList.remove('aos-animate');
+        });
+      }
+      lastScrollTop = st <= 0 ? 0 : st;
+    }, false);
   </script>
 </body>
 
