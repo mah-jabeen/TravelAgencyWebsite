@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="icon" type="image/jpg" href="assets/logo1.jpg" style="height: 30px;">
+  <title>WanderNest</title>
+  <style>
+    .hero-section {
+      position: relative;
+      min-height: 100vh;
+      background: url('assets/Decore.png') no-repeat;
+      background-size: cover;
+      background-position: center;
+      padding-top: 80px;
+    }
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.9);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+    }
+    .container-xxl {
+      position: relative;
+      z-index: 1001;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- navbar -->
+  <div class="container-xxl">
+    <nav class="navbar navbar-expand-lg navbar-light custom-navbar animate__animated animate__fadeInDown">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#home">
+          <img src="assets/logo1.jpg" alt="WanderNest Logo" class="navbar-brand img">
+          <span class="site-name">WanderNest</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto w-75 d-flex justify-content-evenly fs-6">
+            <li class="nav-item">
+              <a class="nav-link active" href="destinations.html">Destinations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="hotels.html">Hotels</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="flights.html">Flights</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bookings.html">Bookings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-outline-dark w-100" href="signup.html">SignUp</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                EN
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="en.html">English</a></li>
+                <li><a class="dropdown-item" href="es.html">Spanish</a></li>
+                <li><a class="dropdown-item" href="fr.html">French</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <div id="home" class="hero container-lg p-0 d-flex flex-column flex-lg-row align-items-center justify-content-between"
+    data-aos="fade-right" data-aos-duration="1000">
+    <div class="content p-2 p-sm-4 d-flex flex-column ps-lg-5" style="max-width: 500px">
+      <p class="fw-bold" style="color: #DF6951;">Best Destinations around the world</p>
+      <h1 class="fw-bolder display-4 mt-2">Travel, enjoy and live a new and full life</h1>
+      <p class="mt-3">Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening.
+        Park gate sell they west hard for the.</p>
+      <div class="d-flex align-items-center mt-4">
+        <button type="button" class="btn btn-warning rounded-pill px-4 py-2">Find out more</button>
+        <div class="ms-4 d-flex align-items-center">
+          <img src="assets/Play.png" alt="" class="h-25 w-25">
+          <p class="mb-0">Play Demo</p>
+        </div>
+      </div>
+    </div>
+    <img src="assets/Traveller_1.png" class="w-50 p-4 position-relative animate__animated animate__fadeInRight"
+      style="min-width: 650px; max-width: 900px;" alt="">
+  </div>
+
+  <div id="destinations" class="container-lg mt-5 p-0 pt-5">
+    <p class="text-center animate__animated animate__fadeInUp">CATEGORY</p>
+    <h1 class="text-center fw-bolder animate__animated animate__fadeInUp">We Offer Best Services</h1>
+    <div class="row  mt-4 ">
+      <div class="col-sm-6 col-lg-3 " data-aos="flip-left" data-aos-delay="100">
+        <div class="card d-flex justify-content-center align-items-center animate__animated  animate__flipInX"
+          style="width: 14rem; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+          <img src="assets/Group 48.png" class="card-img-top mt-4 mb-2" alt="..." style="height: 50px; width: 70px">
+          <div class="card-body">
+            <h5 class="card-title">Calculated Weather</h5>
+            <p class="card-text">Built Wicket longer admire do barton vanity itself do in it.</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="200">
+        <div class="card d-flex justify-content-center align-items-center animate__animated  animate__flipInX"
+          style="width: 14rem; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; ">
+          <img src="assets/Group 51.png" class="card-img-top" alt="..." style="height: 80px; width: 125px">
+          <div class="card-body">
+            <h5 class="card-title">Best Flights</h5>
+            <p class="card-text">Engrossed listening. Park gate sell they west hard for the.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="300">
+        <div class="card d-flex justify-content-center align-items-center animate__animated  animate__flipInX"
+          style="width: 14rem; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+          <img src="assets/Group 50.png" class="card-img-top mt-4 mb-2" alt="..." style="height: 50px; width: 70px">
+          <div class="card-body">
+            <h5 class="card-title">Local Events</h5>
+            <p class="card-text">Barton vanity itself do in it. Preferd to men it engrossed listening. </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3" data-aos="flip-left" data-aos-delay="400">
+        <div class="card d-flex justify-content-center align-items-center animate__animated  animate__flipInX"
+          style="width: 14rem; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+          <img src="assets/Group 49.png" class="card-img-top mt-4 mb-2" alt="..." style="height: 50px; width: 70px">
+          <div class="card-body">
+            <h5 class="card-title">Customization</h5>
+            <p class="card-text">We deliver outsourced aviation services for military customers</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- container2 -->
+  <div id="services" class="container-lg mt-5 p-0 pt-5">
+    <p class="text-center animate__animated animate__fadeInUp">Top Selling</p>
+    <h1 class="text-center fw-bolder animate__animated animate__fadeInUp">Top Destinations</h1>
+    <div class="row mt-4 gx-5 gy-5 d-flex justify-content-evenly  ">
+      <div class="card col-sm-6 col-md-4 col-lg-3 p-2 "
+        style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; height: 420px;" data-aos="zoom-in" data-aos-delay="100">
+        <img src="assets/1.png" class="card-img-top mb-3" alt="...">
+        <div class="card-body">
+          <div class="d-flex justify-content-between">
+            <p class="card-text">Rome, Italy </p>
+            <p class="card-text"> $5,42k</p>
+          </div>
+
+          <p class="card-text"><small class="text-body-secondary"> <img src="assets/navigation 1.png" alt=""
+                style="width:12px"> 10 Days Trip</small></p>
+        </div>
+      </div>
+
+      <div class="card col-sm-6 col-md-4 col-lg-3 p-2 "
+        style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; height: 420px;" data-aos="zoom-in" data-aos-delay="200">
+        <img src="assets/2.jpg" class="card-img-top mb-3" alt="..." style="height:75%;">
+        <div class="card-body">
+          <div class="d-flex justify-content-between">
+            <p class="card-text">London, UK </p>
+            <p class="card-text">$4.2k</p>
+          </div>
+
+          <p class="card-text"><small class="text-body-secondary"> <img src="assets/navigation 1.png" alt=""
+                style="width:12px"> 12 Days Trip</small></p>
+        </div>
+      </div>
+
+      <div class="card col-sm-6 col-md-4 col-lg-3 p-2 "
+        style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; height: 420px;" data-aos="zoom-in" data-aos-delay="300">
+        <img src="assets/3.png" class="card-img-top mb-3" alt="..." style="height:75%;">
+        <div class="card-body">
+          <div class="d-flex justify-content-between">
+            <p class="card-text">Full Europe </p>
+            <p class="card-text"> $15k</p>
+          </div>
+
+          <p class="card-text"><small class="text-body-secondary"> <img src="assets/navigation 1.png" alt=""
+                style="width:12px"> 28 Days Trip</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- container3 -->
+  <div
+    class="container-lg mt-5 p-0  rounded  d-flex flex-column flex-lg-row align-items-center justify-content-between">
+    <div class="content p-2 p-sm-4 pt-4 d-flex flex-column ps-lg-5" style="max-width: 550px" data-aos="fade-right" data-aos-duration="1000">
+      <p class="fw-bold" style="color: #5E6282;">Easy and Fast</p>
+      <h1 class="fw-bolder display-6">Book your next trip in 3 easy steps</h1>
+      <div class="d-flex justify-content-between mt-3">
+        <img src="assets/Group 7.png" alt="" style="width: 50px; height: 50px">
+        <div class="ms-3">
+          <p class=" fw-bold">Choose Destinations </p>
+          <p> Explore diverse cultures, breathtaking landscapes, and unforgettable adventures by choosing the perfect
+            destination for your next trip.</p>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between mt-3">
+        <img src="assets/Group 12.png" alt="" style="width: 50px; height: 50px">
+        <div class="ms-3">
+          <p class=" fw-bold">Make Payment </p>
+          <p> Explore diverse cultures, breathtaking landscapes, and unforgettable adventures by choosing the perfect
+            destination for your next trip.</p>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-between mt-3">
+        <img src="assets/Group 11.png" alt="" style="width: 50px; height: 50px">
+        <div class="ms-3">
+          <p class=" fw-bold">Reach Airport on Selected Date </p>
+          <p> Explore diverse cultures, breathtaking landscapes, and unforgettable adventures by choosing the perfect
+            destination for your next trip.</p>
+        </div>
+      </div>
+
+      <!-- Add Play Demo Button -->
+      <div class="mt-4">
+        <a href="#" class="play-demo-btn" data-bs-toggle="modal" data-bs-target="#demoVideoModal">
+          <img src="assets/play.png" alt="Play" class="me-2" style="width: 45px;">
+          Play Demo
+        </a>
+      </div>
+    </div>
+
+    <img src="assets/Image.png" class="w-50 p-4  position-relative animate__animated animate__fadeInRight"
+      style="min-width: 650px; max-width: 900px; top:30px" alt="">
+  </div>
+  <br><br><br><br>
+
+  <!-- Video Modal -->
+  <div class="modal fade" id="demoVideoModal" tabindex="-1" aria-labelledby="demoVideoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="demoVideoModalLabel">Travel Agency Demo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/your-video-id" title="Travel Agency Demo" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Us Section -->
+  <section class="contact-section py-5" style="background-color: #f8f9fa;">
+    <div class="container-lg">
+      <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold animate__animated animate__fadeInDown">Contact Us</h2>
+        <p class="text-muted animate__animated animate__fadeInUp">Get in touch with us for any questions about our services</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Contact Form -->
+        <div class="col-lg-6 animate__animated animate__fadeInLeft">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-4">
+              <form>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="name" placeholder="Your Name">
+                      <label for="name">Your Name</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input type="email" class="form-control" id="email" placeholder="Your Email">
+                      <label for="email">Your Email</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="subject" placeholder="Subject">
+                      <label for="subject">Subject</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <textarea class="form-control" id="message" style="height: 150px" placeholder="Your Message"></textarea>
+                      <label for="message">Your Message</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-warning btn-lg w-100" type="submit">Send Message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Info & Map -->
+        <div class="col-lg-6 animate__animated animate__fadeInRight">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body p-4">
+              <div class="contact-info mb-4">
+                <h4 class="mb-4">Get in Touch</h4>
+                <div class="d-flex align-items-center mb-3">
+                  <div class="contact-icon me-3">
+                    <i class="fas fa-map-marker-alt fa-2x text-warning"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-1">Our Location</h6>
+                    <p class="mb-0 text-muted">123 Travel Street, City, Country</p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                  <div class="contact-icon me-3">
+                    <i class="fas fa-phone fa-2x text-warning"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-1">Phone Number</h6>
+                    <p class="mb-0 text-muted">+1 234 567 8900</p>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                  <div class="contact-icon me-3">
+                    <i class="fas fa-envelope fa-2x text-warning"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-1">Email Address</h6>
+                    <p class="mb-0 text-muted">info@travelagency.com</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Map -->
+              <div class="map-container">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.30591910525!2d-74.25986432970718!3d40.697149422113014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1647043087964!5m2!1sen!2s" 
+                  width="100%" 
+                  height="250" 
+                  style="border:0; border-radius: 8px;" 
+                  allowfullscreen="" 
+                  loading="lazy">
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="py-5 mt-5" style="background-color: #9f9696;">
+    <div class="container-lg">
+      <div class="row g-4">
+        <!-- Company Info -->
+        <div class="col-lg-4">
+          <img src="assets/logo1.jpg" alt="Travel Agency Logo" class="footer-logo mb-3">
+          <p class="text-light" style="opacity: 0.8;">Your trusted partner in creating unforgettable travel experiences. We make your dream vacations come true with our exceptional service and attention to detail.</p>
+          <div class="social-icons mt-3">
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="text-light me-3" style="opacity: 0.8;"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="text-light me-3" style="opacity: 0.8;"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="text-light me-3" style="opacity: 0.8;"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="text-light" style="opacity: 0.8;"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-4">
+          <h5 class="mb-3 text-light">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#home" class="text-light text-decoration-none" style="opacity: 0.8;">Home</a></li>
+            <li class="mb-2"><a href="#about" class="text-light text-decoration-none" style="opacity: 0.8;">About Us</a></li>
+            <li class="mb-2"><a href="#destinations" class="text-light text-decoration-none" style="opacity: 0.8;">Destinations</a></li>
+            <li class="mb-2"><a href="#packages" class="text-light text-decoration-none" style="opacity: 0.8;">Packages</a></li>
+            <li class="mb-2"><a href="#contact" class="text-light text-decoration-none" style="opacity: 0.8;">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="col-lg-2 col-md-4">
+          <h5 class="mb-3 text-light">Support</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#faq" class="text-light text-decoration-none" style="opacity: 0.8;">FAQs</a></li>
+            <li class="mb-2"><a href="#terms" class="text-light text-decoration-none" style="opacity: 0.8;">Terms & Conditions</a></li>
+            <li class="mb-2"><a href="#privacy" class="text-light text-decoration-none" style="opacity: 0.8;">Privacy Policy</a></li>
+            <li class="mb-2"><a href="#refund" class="text-light text-decoration-none" style="opacity: 0.8;">Refund Policy</a></li>
+            <li class="mb-2"><a href="#support" class="text-light text-decoration-none" style="opacity: 0.8;">Support Center</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-lg-4 col-md-4">
+          <h5 class="mb-3 text-light">Contact Info</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2 text-light" style="opacity: 0.8;">
+              <a href="https://maps.google.com" target="_blank" rel="noopener" class="text-light text-decoration-none" style="opacity: 0.8;">
+                <i class="fas fa-map-marker-alt me-2"></i> 123 Travel Street, City, Country
+              </a>
+            </li>
+            <li class="mb-2 text-light" style="opacity: 0.8;">
+              <a href="tel:+12345678900" class="text-light text-decoration-none" style="opacity: 0.8;">
+                <i class="fas fa-phone me-2"></i> +1 234 567 8900
+              </a>
+            </li>
+            <li class="mb-2 text-light" style="opacity: 0.8;">
+              <a href="mailto:info@travelagency.com" class="text-light text-decoration-none" style="opacity: 0.8;">
+                <i class="fas fa-envelope me-2"></i> info@travelagency.com
+              </a>
+            </li>
+          </ul>
+          <div class="mt-3">
+            <h6 class="mb-2 text-light">Subscribe to our newsletter</h6>
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter your email" style="background-color: #3B3B3B; border: none; color: white;">
+              <button class="btn btn-warning" type="button">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="row mt-4 pt-4 border-top border-secondary">
+        <div class="col-12 text-center">
+          <p class="mb-0 text-light" style="opacity: 0.8;">&copy; 2024 Travel Agency. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Add smooth scroll behavior -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    .nav-link, .footer-link {
+      transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover, .footer-link:hover {
+      opacity: 0.7 !important;
+      transform: translateY(-2px);
+    }
+  </style>
+
+  <!-- Add Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    // Initialize AOS with optimized settings
+    AOS.init({
+      duration: 600, // Faster duration for snappier animations
+      once: true, // Prevent repeated animations
+      offset: 120, // Slightly higher offset for better timing
+      delay: 0, // No delay for immediate response
+      easing: 'ease-in-out', // Smooth easing function
+      mirror: false, // Disable mirror for better performance
+      disable: function() {
+        return window.innerWidth < 768; // Disable on mobile
+      }
+    });
+
+    // Optimize scroll performance with requestAnimationFrame
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          const elements = document.querySelectorAll('.animate__animated');
+          elements.forEach(element => {
+            const position = element.getBoundingClientRect();
+            if(position.top < window.innerHeight && position.bottom >= 0) {
+              element.style.visibility = 'visible';
+            }
+          });
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    // Smooth scroll with improved performance
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const headerOffset = 80; // Adjust based on your header height
+          const elementPosition = target.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

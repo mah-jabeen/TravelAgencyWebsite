@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>My Bookings - Travel Agency</title>
+</head>
+<body>
+    <!-- navbar -->
+    <div class="container-xxl">
+        <nav class="navbar navbar-expand-lg navbar-light custom-navbar animate__animated animate__fadeInDown">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/logo.png" alt="" class="w-70">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-auto w-75 d-flex justify-content-evenly fs-6">
+                        <li class="nav-item">
+                            <a class="nav-link" href="destinations.html">Destinations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="hotels.html">Hotels</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="flights.html">Flights</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="bookings.html">Bookings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-outline-dark w-100" href="signup.html">SignUp</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                EN
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="en.html">English</a></li>
+                                <li><a class="dropdown-item" href="es.html">Spanish</a></li>
+                                <li><a class="dropdown-item" href="fr.html">French</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Page Header -->
+    <div class="container py-4">
+        <h1 class="text-center mb-4" data-aos="fade-up">My Bookings</h1>
+        <p class="text-center text-muted mb-5" data-aos="fade-up" data-aos-delay="100">Manage and track all your travel bookings in one place</p>
+    </div>
+
+    <!-- Bookings Section -->
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-3">
+                <!-- Sidebar -->
+                <div class="card border-0 shadow-sm mb-4" data-aos="fade-right">
+                    <div class="card-body">
+                        <h5 class="card-title mb-3">Filter Bookings</h5>
+                        <div class="mb-3">
+                            <label for="status" class="form-label">Status</label>
+                            <select class="form-select" id="status">
+                                <option value="all">All Bookings</option>
+                                <option value="upcoming">Upcoming</option>
+                                <option value="completed">Completed</option>
+                                <option value="cancelled">Cancelled</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="type" class="form-label">Type</label>
+                            <select class="form-select" id="type">
+                                <option value="all">All Types</option>
+                                <option value="flight">Flights</option>
+                                <option value="hotel">Hotels</option>
+                                <option value="package">Packages</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-warning w-100">Apply Filters</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <!-- Bookings List -->
+                <div class="card border-0 shadow-sm mb-4" data-aos="fade-up">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="card-title mb-0">Paris Getaway Package</h5>
+                            <span class="badge bg-success">Confirmed</span>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p class="text-muted mb-2"><i class="fas fa-hashtag me-2"></i>Booking ID: #BK123456</p>
+                                <p class="mb-2"><i class="far fa-calendar-alt me-2"></i>Dates: June 15 - June 22, 2024</p>
+                                <p class="mb-0"><i class="fas fa-list me-2"></i>Includes: Flight + Hotel + City Tour</p>
+                            </div>
+                            <div class="col-md-4 text-md-end">
+                                <p class="h5 mb-3">$1,299</p>
+                                <button class="btn btn-warning btn-sm">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="card-title mb-0">Tokyo Business Trip</h5>
+                            <span class="badge bg-primary">Upcoming</span>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p class="text-muted mb-2"><i class="fas fa-hashtag me-2"></i>Booking ID: #BK123457</p>
+                                <p class="mb-2"><i class="far fa-calendar-alt me-2"></i>Dates: July 1 - July 5, 2024</p>
+                                <p class="mb-0"><i class="fas fa-list me-2"></i>Includes: Flight + Hotel</p>
+                            </div>
+                            <div class="col-md-4 text-md-end">
+                                <p class="h5 mb-3">$899</p>
+                                <button class="btn btn-warning btn-sm">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="card-title mb-0">Sydney Vacation</h5>
+                            <span class="badge bg-secondary">Completed</span>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p class="text-muted mb-2"><i class="fas fa-hashtag me-2"></i>Booking ID: #BK123458</p>
+                                <p class="mb-2"><i class="far fa-calendar-alt me-2"></i>Dates: March 10 - March 17, 2024</p>
+                                <p class="mb-0"><i class="fas fa-list me-2"></i>Includes: Flight + Hotel + Activities</p>
+                            </div>
+                            <div class="col-md-4 text-md-end">
+                                <p class="h5 mb-3">$1,499</p>
+                                <button class="btn btn-warning btn-sm">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact-section py-5" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold animate__animated animate__fadeInDown">Need Help?</h2>
+                <p class="text-muted animate__animated animate__fadeInUp">Contact our support team for any assistance with your bookings</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                            <label for="name">Your Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                            <label for="email">Your Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="booking" placeholder="Booking ID">
+                                            <label for="booking">Booking ID</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" id="message" style="height: 150px" placeholder="Your Message"></textarea>
+                                            <label for="message">Your Message</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-warning btn-lg w-100" type="submit">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="py-5 mt-5" style="background-color: #9f9696;">
+        <div class="container-lg">
+            <div class="row g-4">
+                <!-- Company Info -->
+                <div class="col-lg-4">
+                    <img src="assets/logo.png" alt="Travel Agency Logo" class="mb-3" style="height: 40px;">
+                    <p class="text-light" style="opacity: 0.8;">Your trusted partner in creating unforgettable travel experiences. We make your dream vacations come true with our exceptional service and attention to detail.</p>
+                    <div class="social-icons mt-3">
+                        <a href="https://facebook.com" target="_blank" rel="noopener" class="text-light me-3" style="opacity: 0.8;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener" class="text-light me-3" style="opacity: 0.8;"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener" class="text-light me-3" style="opacity: 0.8;"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener" class="text-light" style="opacity: 0.8;"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="mb-3 text-light">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-light text-decoration-none" style="opacity: 0.8;">Home</a></li>
+                        <li class="mb-2"><a href="destinations.html" class="text-light text-decoration-none" style="opacity: 0.8;">Destinations</a></li>
+                        <li class="mb-2"><a href="hotels.html" class="text-light text-decoration-none" style="opacity: 0.8;">Hotels</a></li>
+                        <li class="mb-2"><a href="flights.html" class="text-light text-decoration-none" style="opacity: 0.8;">Flights</a></li>
+                        <li class="mb-2"><a href="bookings.html" class="text-light text-decoration-none" style="opacity: 0.8;">Bookings</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="mb-3 text-light">Support</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none" style="opacity: 0.8;">FAQs</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none" style="opacity: 0.8;">Terms & Conditions</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none" style="opacity: 0.8;">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none" style="opacity: 0.8;">Refund Policy</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none" style="opacity: 0.8;">Support Center</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="mb-3 text-light">Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2 text-light" style="opacity: 0.8;">
+                            <a href="https://maps.google.com" target="_blank" rel="noopener" class="text-light text-decoration-none" style="opacity: 0.8;">
+                                <i class="fas fa-map-marker-alt me-2"></i> 123 Travel Street, City, Country
+                            </a>
+                        </li>
+                        <li class="mb-2 text-light" style="opacity: 0.8;">
+                            <a href="tel:+12345678900" class="text-light text-decoration-none" style="opacity: 0.8;">
+                                <i class="fas fa-phone me-2"></i> +1 234 567 8900
+                            </a>
+                        </li>
+                        <li class="mb-2 text-light" style="opacity: 0.8;">
+                            <a href="mailto:info@travelagency.com" class="text-light text-decoration-none" style="opacity: 0.8;">
+                                <i class="fas fa-envelope me-2"></i> info@travelagency.com
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="mt-3">
+                        <h6 class="mb-2 text-light">Subscribe to our newsletter</h6>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email" style="background-color: #3B3B3B; border: none; color: white;">
+                            <button class="btn btn-warning" type="button">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="row mt-4 pt-4 border-top border-secondary">
+                <div class="col-12 text-center">
+                    <p class="mb-0 text-light" style="opacity: 0.8;">&copy; 2024 Travel Agency. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: false,
+            offset: 100
+        });
+    </script>
+</body>
+</html> 
